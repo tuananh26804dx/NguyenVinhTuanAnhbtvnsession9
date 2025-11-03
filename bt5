@@ -1,0 +1,36 @@
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Nhap so luong phan tu cua mang: ");
+    scanf("%d", &n);
+    int arr[n];
+    int even_count = 0, odd_count = 0;
+    int even_list[n], odd_list[n];
+    printf("Nhap cac phan tu cua mang:\n");
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0) {
+            even_list[even_count] = arr[i];
+            even_count++;
+        } else {
+            odd_list[odd_count] = arr[i];
+            odd_count++;
+        }
+    }
+    printf("\nSo luong so chan: %d\n", even_count);
+    printf("So luong so le: %d\n", odd_count);
+    printf("Cac so chan: ");
+    for (int i = 0; i < even_count; i++) {
+        printf("%d ", even_list[i]);
+    }
+    printf("\n");
+    printf("Cac so le: ");
+    for (int i = 0; i < odd_count; i++) {
+        printf("%d ", odd_list[i]);
+    }
+    printf("\n");
+
+    return 0;
+}

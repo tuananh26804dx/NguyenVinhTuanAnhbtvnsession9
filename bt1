@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <math.h>
+ 
+int main (){
+	int arr[]={1,5,2,3,23,5,1,2};
+	int size = sizeof(arr) / sizeof(arr[0]);
+	int freq[size];
+	int visited[size];
+	
+	for(int i = 0;i < size;i++){
+		freq[i] = 0;
+		visited[i] = 0; 
+	} 
+	for(int i=0;i < size;i++){
+		if(visited[i]==1) continue;
+		if count = 1;
+		for(int j=i + 1;j<size;j++){
+			if(arr[i]==arr[i]){
+				count++;
+				visited[j] = 1; 
+			} 
+		}
+		freq[i]=count; 
+	} 
+	for(int i=0;i<size;i++) {
+		printf("arr[%d] xuat hien %d lan \n", arr[i],freq[i]); 
+	}
+	int maxFreq = 0;
+	for(int i=0;i<size;i++) {
+		if(freq[i]==maxFreq){
+			printf("%d", arr[i]); 
+		} 
+	}
+}
+	

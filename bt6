@@ -1,0 +1,31 @@
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Nhap so luong phan tu cua mang: ");
+    scanf("%d", &n);
+    int mang[n];
+    printf("Nhap %d gia tri nguyen cho mang:\n", n);
+    for (int i = 0; i < n; i++) {
+        printf("Phan tu thu %d: ", i);
+        scanf("%d", &mang[i]);
+    }
+
+    int x;
+    printf("Nhap gia tri x can tim: ");
+    scanf("%d", &x);
+    int timThay = 0;
+    printf("Vi tri cua %d trong mang la: ", x);
+    for (int i = 0; i < n; i++) {
+        if (mang[i] == x) {
+            printf("%d ", i);
+            timThay = 1;
+        }
+    }
+
+    if (!timThay) {
+        printf("khong tim thay.");
+    }
+    printf("\n");
+
+    return 0;
+}
